@@ -7,6 +7,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+use Illuminate\Support\Facades\App;
+ 
+Route::get('/welcome/{locale}', function (string $locale) {
+    if (! in_array($locale, ['fr', 'ar'])) {
+        abort(400);
+    }
+ 
+    App::setLocale($locale);
+    
+    return view('welcome');
+
+    // ...
+});
+
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
