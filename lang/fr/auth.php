@@ -18,4 +18,13 @@ return [
     'password' => 'Le mot de passe fourni est incorrect.',
     'throttle' => 'Trop de tentatives de connexion. Veuillez réessayer dans :seconds secondes.',
 
+    'register' => [
+        'Name' => 'Nom',
+        'Email' => 'Adresse e-mail',
+        'Password' => 'Mot de passe',
+        'Confirm_Password' => 'Confirmer le mot de passe',
+
+    ],
+
+
 ];
